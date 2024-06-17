@@ -1,6 +1,6 @@
 const Joi = require("joi");
 
-const createBooksSchema = {
+const createSchema = {
   payload: Joi.object({
     title: Joi.string().required(),
     authorId: Joi.string().max(40).required(),
@@ -25,7 +25,7 @@ const getById = {
 
 
 module.exports = {
-  createBooksSchema,
+  createSchema,
   getAll,
   getById
 };
